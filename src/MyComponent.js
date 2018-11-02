@@ -1,19 +1,19 @@
 // @flow
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+
+import { Paper } from '@material-ui/core';
 
 type Props = {
   name: string | number,
+  styles: any
 };
 
 const MyComponent = (props: Props) =>
-  <div>
-    <p>
-      {props.name}
-    </p>
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-  </div>;
-
+  <Paper style={props.styles.Paper}>
+    <div>
+      <p>
+        {props.name}
+      </p>
+    </div>
+  </Paper>;
 export default MyComponent;

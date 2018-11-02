@@ -1,9 +1,11 @@
 //@flow
 import * as React from 'react';
+import { Paper } from '@material-ui/core';
 
 type Props = {
   foo: string,
-  bar: string
+  bar: string,
+  styles: any
 };
 
 export default class MyClassComponent extends React.Component<Props> {
@@ -17,10 +19,12 @@ export default class MyClassComponent extends React.Component<Props> {
     <div>{this.props.foo}</div>;
 
     return (
-      <div>
-        {myFooConst}
-        <p>{this.props.bar}</p>
-      </div>
+      <Paper style={this.props.styles.Paper}>
+        <div>
+          {myFooConst}
+          <p>{this.props.bar}</p>
+        </div>
+      </Paper>
     );
   }
 }
